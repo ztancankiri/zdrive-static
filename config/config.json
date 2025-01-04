@@ -1,0 +1,11 @@
+{
+	"endpoints": {
+		"files": "/api/files",
+		"nginx": "/static",
+		"auth": "/api/auth",
+		"pin": {
+			"req": "/api/req-pin",
+			"auth": "/api/auth-pin"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+services:
+  zdrive-static:
+    image: ztancankiri/zdrive-static
+    container_name: zdrive-static
+    hostname: zdrive-static
+    ports:
+      - 8082:8082
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/.env:/app/backend/.env:ro
+      - ./config/config.json:/app/frontend/config.json:ro
+      - <STATIC_FILES_PATH>:/static:ro
+    restart: unless-stopped
